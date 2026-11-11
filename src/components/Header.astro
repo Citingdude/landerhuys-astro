@@ -1,6 +1,7 @@
 ---
 import { business, navigation, links } from '../data/home'
 import Arrow from './Arrow.astro'
+const currentPath = Astro.url.pathname.replace(/\/+$/, '') || '/'
 ---
 
 <a class="skip-link" href="#inhoud">Naar de inhoud</a>
@@ -18,7 +19,7 @@ import Arrow from './Arrow.astro'
     <nav class="desktop-nav" aria-label="Hoofdnavigatie">
       {
         navigation.map((item) => (
-          <a href={item.href} aria-current={item.href === '/' ? 'page' : undefined}>
+          <a href={item.href} aria-current={item.href === currentPath ? 'page' : undefined}>
             {item.label}
           </a>
         ))
@@ -34,7 +35,7 @@ import Arrow from './Arrow.astro'
       <nav id="mobile-links" aria-label="Mobiele navigatie">
         {
           navigation.map((item) => (
-            <a href={item.href} aria-current={item.href === '/' ? 'page' : undefined}>
+            <a href={item.href} aria-current={item.href === currentPath ? 'page' : undefined}>
               {item.label}
             </a>
           ))

@@ -1,13 +1,21 @@
 ---
 import '../styles/global.css'
 import { business, copy, links } from '../data/home'
+interface Props {
+  title?: string
+  description?: string
+}
+const { title = 'Het Landerhuys | Grand café in Stal-Koersel', description = copy.reservation } = Astro.props
 const indexable = import.meta.env.PROD && import.meta.env.PUBLIC_INDEXABLE === 'true'
-const canonical = 'https://landerhuys.be/'
+const site = Astro.site ?? new URL('https://landerhuys.be')
+const pathname = Astro.url.pathname.replace(/\/+$/, '') || '/'
+const canonical = new URL(pathname, site).href
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'Restaurant',
   name: business.name,
-  url: canonical,
+  '@id': new URL('/#restaurant', site).href,
+  url: site.href,
   telephone: business.telephone,
   vatID: business.vat,
   address: {
@@ -17,8 +25,8 @@ const structuredData = {
     addressLocality: 'Stal - Koersel',
     addressCountry: 'BE',
   },
-  hasMenu: links.menu,
-  acceptsReservations: links.reservation,
+  hasMenu: new URL(links.menu, site).href,
+  acceptsReservations: new URL(links.reservation, site).href,
   // The homepage supplies opening times, but no restaurant closing time.
   // Keep its kitchen closing time out of openingHoursSpecification.
 }
@@ -30,18 +38,18 @@ const structuredData = {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#263D32" />
-    <title>Het Landerhuys | Grand café in Stal-Koersel</title>
-    <meta name="description" content={copy.reservation} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
     <meta name="robots" content={indexable ? 'index, follow' : 'noindex, nofollow'} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="nl_BE" />
-    <meta property="og:title" content="Het Landerhuys | Grand café in Stal-Koersel" />
-    <meta property="og:description" content={copy.reservation} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content="https://landerhuys.be/images/social.jpg" />
-    <meta property="og:image:alt" content="Bloemen uit de seizoensfotografie van Het Landerhuys" />
+    <meta property="og:image:alt" content="Het Landerhuys met de veranda, het terras en de bloeiende tuin" />
     <meta name="twitter:card" content="summary_large_image" />
     <script type="application/ld+json" set:html={JSON.stringify(structuredData).replace(/</g, '\\u003c')} />
   </head>

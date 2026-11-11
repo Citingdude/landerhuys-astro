@@ -851,6 +851,242 @@ p + p {
     gap: 6px;
   }
 }
+.page-hero {
+  padding-block: 76px;
+  border-bottom: 1px solid var(--line);
+}
+.page-hero-with-image {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+.page-hero-copy h1 {
+  font-size: clamp(60px, 6.5vw, 92px);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin-top: 24px;
+  overflow-wrap: break-word;
+}
+.page-intro {
+  max-width: 700px;
+  margin-top: 28px;
+  color: #516054;
+  font-size: 1.125rem;
+}
+.page-hero-image {
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+.page-hero-image picture,
+.page-hero-image img,
+.feature-image picture,
+.feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.page-hero-image:not(.page-hero-image-contain) img {
+  transform: scale(1.01);
+}
+.page-hero-image-contain,
+.feature-image-contain {
+  background: white;
+  padding: 24px;
+}
+.page-hero-image-contain img,
+.feature-image-contain img {
+  object-fit: contain;
+}
+.reservation-page-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 80px;
+  align-items: start;
+  padding-block: 72px 96px;
+}
+.reservation-page-grid > * {
+  min-width: 0;
+}
+.booking-panel {
+  grid-column: 2;
+  padding: 40px 28px;
+  background: white;
+  border: 1px solid var(--line);
+}
+.booking-panel h2 {
+  font-size: clamp(36px, 3.8vw, 52px);
+  margin: 16px 0 24px;
+}
+.booking-phone {
+  font-size: 0.875rem;
+  margin-bottom: 30px;
+}
+.booking-phone a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.booking-widget {
+  min-height: 500px;
+}
+.booking-fallback {
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  font-size: 0.875rem;
+}
+.booking-direct {
+  display: block;
+  margin-top: 20px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.visit-panel {
+  grid-column: 1;
+  grid-row: 1;
+}
+.visit-panel > h2 {
+  font-size: 42px;
+  margin-bottom: 24px;
+}
+.visit-panel address,
+.gift-contact-details address {
+  font-style: normal;
+}
+.visit-panel .opening-hours {
+  border-top: 1px solid var(--line);
+  margin-top: 32px;
+  padding-top: 32px;
+}
+.visit-panel .opening-hours p {
+  font-size: 1rem;
+}
+.visit-panel .opening-hours h2 {
+  font-size: 32px;
+}
+.contact-email {
+  display: block;
+  width: fit-content;
+  margin-top: 24px;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  overflow-wrap: anywhere;
+}
+.visit-photograph {
+  margin-top: 36px;
+  overflow: hidden;
+}
+.visit-photograph img {
+  transform: scale(1.01);
+}
+.feature-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 88px;
+  padding-block: 88px;
+  align-items: center;
+}
+.feature-copy h2 {
+  margin: 20px 0 28px;
+}
+.feature-copy .button,
+.feature-copy .text-link {
+  margin-top: 30px;
+}
+.feature-copy > p {
+  color: #516054;
+}
+.feature-copy .feature-schedule {
+  font-weight: 500;
+  color: var(--color-forest);
+  margin-bottom: 24px;
+}
+.feature-image {
+  aspect-ratio: 1;
+}
+.specials-promotions {
+  padding-block: 88px;
+  background: #e9ecdf;
+}
+.gift-collection {
+  margin-block: 20px 28px;
+}
+.shop-caption {
+  font-size: 0.875rem;
+  margin-top: 18px;
+  color: #516054;
+}
+.gift-contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 88px;
+  padding-block: 72px 88px;
+}
+.gift-contact h2 {
+  margin-block: 20px 28px;
+  font-size: 48px;
+}
+.gift-contact-details {
+  border-left: 1px solid var(--line);
+  padding-left: 48px;
+}
+.jobs-contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px 28px;
+  margin-top: 32px;
+}
+@media (max-width: 1099px) {
+  .page-hero-with-image,
+  .feature-section,
+  .reservation-page-grid {
+    gap: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .page-hero {
+    padding-block: 44px;
+  }
+  .page-hero-with-image,
+  .feature-section,
+  .reservation-page-grid,
+  .gift-contact {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .page-hero-copy h1 {
+    font-size: clamp(46px, 12vw, 68px);
+  }
+  .page-intro {
+    font-size: 1rem;
+  }
+  .reservation-page-grid {
+    padding-block: 40px 64px;
+  }
+  .booking-panel,
+  .visit-panel {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .booking-panel {
+    padding: 28px 16px;
+  }
+  .booking-widget {
+    min-height: 500px;
+  }
+  .feature-section,
+  .specials-promotions,
+  .gift-contact {
+    padding-block: 56px;
+  }
+  .gift-contact-details {
+    padding: 28px 0 0;
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

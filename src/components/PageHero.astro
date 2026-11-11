@@ -1,0 +1,28 @@
+---
+import type { ImageMetadata } from 'astro'
+import Photography from './Photography.astro'
+interface Props {
+  title: string
+  intro?: string
+  image?: ImageMetadata
+  alt?: string
+  contain?: boolean
+}
+const { title, intro, image, alt = '', contain = false } = Astro.props
+---
+
+<section class:list={['container page-hero', { 'page-hero-with-image': image }]} aria-labelledby="page-heading">
+  <div class="page-hero-copy">
+    <a class="eyebrow" href="/">Het Landerhuys · grand café</a>
+    <h1 id="page-heading">{title}</h1>
+    {intro && <p class="page-intro">{intro}</p>}
+    <slot />
+  </div>
+  {
+    image && (
+      <div class:list={['page-hero-image', { 'page-hero-image-contain': contain }]}>
+        <Photography src={image} alt={alt} eager />
+      </div>
+    )
+  }
+</section>

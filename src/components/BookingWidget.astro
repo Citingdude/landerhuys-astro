@@ -1,0 +1,29 @@
+---
+import { business } from '../data/home'
+import { booking, pageCopy } from '../data/pages'
+import Arrow from './Arrow.astro'
+---
+
+<section class="booking-panel" aria-labelledby="booking-heading">
+  <span class="eyebrow">Het Landerhuys</span>
+  <h2 id="booking-heading">{pageCopy.reservation.bookingHeading}</h2>
+  <p class="booking-phone">U kunt ook telefonisch reserveren: <a href={business.phoneHref}>{business.telephone}</a>.</p>
+  <div class="booking-widget" id="easybooker-inlineform"></div>
+  <script
+    is:inline
+    src={booking.scriptUrl}
+    data-business-id={booking.businessId}
+    data-widget-type="inline"
+    data-base-url={booking.baseUrl}
+    data-element="easybooker-inlineform"
+    data-widget-lang="nl"
+    data-tracking-disabled="true"></script>
+  <noscript><p>Voor het online reserveren is JavaScript nodig. U kunt ook telefonisch reserveren.</p></noscript>
+  <div class="booking-fallback">
+    <p>{pageCopy.reservation.phoneFallback}</p>
+    <a href={business.phoneHref} class="text-link">{business.telephone}<Arrow /></a>
+    <a href={booking.directUrl} class="booking-direct"
+      >Open het reservatievenster apart <span aria-hidden="true">↗</span></a
+    >
+  </div>
+</section>

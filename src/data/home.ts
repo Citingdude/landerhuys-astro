@@ -11,6 +11,7 @@ export interface Destination { label: string, href: string }
 export const business = {
   name: 'Het Landerhuys',
   telephone: '+32 11 28 31 00',
+  email: 'info@landerhuys.be',
   phoneHref: 'tel:+3211283100',
   street: 'Kampweg 65',
   locality: '3582 Stal - Koersel',
@@ -18,12 +19,13 @@ export const business = {
   directions: 'https://www.google.com/maps/search/?api=1&query=%22het%20Landerhuys%2C%20Kampweg%2065%2C%203582%20Stal%20-%20Koersel%2C%20Belgium%22',
 }
 export const links = {
-  reservation: 'https://landerhuys.be/contact',
-  specials: 'https://landerhuys.be/over',
-  gift: 'https://landerhuys.be/menu',
-  jobs: 'https://landerhuys.be/vacatures',
-  menu: 'https://landerhuys.be/onewebmedia/Lander_najaar%2026%20site%20menu.pdf',
-  wine: 'https://landerhuys.be/onewebmedia/Lander_najaar%2026%20site%20wijn.pdf',
+  reservation: '/contact',
+  specials: '/over',
+  gift: '/menu',
+  jobs: '/vacatures',
+  giftShop: 'https://giftcards.easybooker.be/783',
+  menu: '/onewebmedia/Lander_najaar%2026%20site%20menu.pdf',
+  wine: '/onewebmedia/Lander_najaar%2026%20site%20wijn.pdf',
 }
 export const navigation: Destination[] = [
   { label: 'HOME', href: '/' },

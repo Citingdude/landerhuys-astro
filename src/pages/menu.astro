@@ -1,0 +1,34 @@
+---
+import PageLayout from '../layouts/PageLayout.astro'
+import PageHero from '../components/PageHero.astro'
+import Arrow from '../components/Arrow.astro'
+import { business, links, photography } from '../data/home'
+import { pageCopy } from '../data/pages'
+const page = pageCopy.gift
+---
+
+<PageLayout title={page.title} description={page.description}>
+  <PageHero
+    title={page.heading}
+    intro={pageCopy.specials.gift}
+    image={photography.gift}
+    alt="Cadeaubonnen van Het Landerhuys"
+    contain
+  >
+    <p class="gift-collection">{pageCopy.specials.giftCollection}</p>
+    <a class="button" href={links.giftShop}>{page.shopLabel}<Arrow /></a>
+    <p class="shop-caption">U bestelt uw cadeaubon via Easybooker.</p>
+  </PageHero>
+  <section class="container gift-contact" aria-labelledby="gift-contact-heading">
+    <div>
+      <span class="eyebrow">Het Landerhuys</span><h2 id="gift-contact-heading">Onze cadeaubonnen</h2><p>
+        {pageCopy.specials.giftCollection}
+      </p>
+    </div>
+    <div class="gift-contact-details">
+      <address>{business.street}<br />{business.locality}</address><a class="text-link" href={business.phoneHref}
+        >{business.telephone}<Arrow /></a
+      ><a class="contact-email" href={`mailto:${business.email}`}>{business.email}</a>
+    </div>
+  </section>
+</PageLayout>

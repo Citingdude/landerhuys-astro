@@ -1,0 +1,28 @@
+---
+import PageLayout from '../layouts/PageLayout.astro'
+import PageHero from '../components/PageHero.astro'
+import BookingWidget from '../components/BookingWidget.astro'
+import OpeningHours from '../components/OpeningHours.astro'
+import Photography from '../components/Photography.astro'
+import Arrow from '../components/Arrow.astro'
+import { business, copy, photography } from '../data/home'
+import { pageCopy } from '../data/pages'
+const page = pageCopy.reservation
+---
+
+<PageLayout title={page.title} description={page.description}>
+  <PageHero title={page.title} intro={copy.reservation} />
+  <div class="container reservation-page-grid">
+    <BookingWidget />
+    <aside class="visit-panel" aria-labelledby="visit-heading">
+      <h2 id="visit-heading">Het Landerhuys</h2>
+      <address>{business.street}<br />{business.locality}</address>
+      <a href={business.directions} class="text-link">Routebeschrijving<Arrow /></a>
+      <OpeningHours />
+      <a href={`mailto:${business.email}`} class="contact-email">{business.email}</a>
+      <div class="visit-photograph">
+        <Photography src={photography.garden} alt="Het terras en de tuin van Het Landerhuys" />
+      </div>
+    </aside>
+  </div>
+</PageLayout>

@@ -1,0 +1,44 @@
+---
+import PageLayout from '../layouts/PageLayout.astro'
+import PageHero from '../components/PageHero.astro'
+import Photography from '../components/Photography.astro'
+import Promotion from '../components/Promotion.astro'
+import Arrow from '../components/Arrow.astro'
+import { links, photography, promotions } from '../data/home'
+import { pageCopy } from '../data/pages'
+const page = pageCopy.specials
+---
+
+<PageLayout title={page.title} description={page.description}>
+  <PageHero title={page.title} />
+  <section class="container feature-section" aria-labelledby="breakfast-heading" id="ontbijt">
+    <div class="feature-copy">
+      <span class="eyebrow">Elke zondag</span>
+      <h2 id="breakfast-heading">{page.breakfastHeading}</h2>
+      <p class="feature-schedule">{page.breakfastHours}</p>
+      <p>{page.breakfast}</p>
+      <a href={links.reservation} class="button">Een tafel reserveren<Arrow /></a>
+    </div>
+    <div class="feature-image">
+      <Photography src={photography.breakfast} alt="Croissants, ontbijtgranen en vers fruit" eager />
+    </div>
+  </section>
+  <section class="specials-promotions" aria-labelledby="suggestions-heading">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Het Landerhuys</span><h2 id="suggestions-heading">Suggesties</h2>
+      </div>
+      <div class="promotions-grid">{promotions.map((promotion) => <Promotion promotion={promotion} />)}</div>
+    </div>
+  </section>
+  <section class="container feature-section" aria-labelledby="special-gift-heading">
+    <div class="feature-copy">
+      <span class="eyebrow">Cadeaubon</span><h2 id="special-gift-heading">{page.giftHeading}</h2>
+      <p>{page.gift}</p><p>{page.giftCollection}</p>
+      <a href={links.gift} class="text-link">Onze cadeaubonnen<Arrow /></a>
+    </div>
+    <div class="feature-image feature-image-contain">
+      <Photography src={photography.gift} alt="De cadeaubonnen van Het Landerhuys" />
+    </div>
+  </section>
+</PageLayout>

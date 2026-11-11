@@ -1,0 +1,24 @@
+---
+import PageLayout from '../layouts/PageLayout.astro'
+import PageHero from '../components/PageHero.astro'
+import Arrow from '../components/Arrow.astro'
+import { business, photography } from '../data/home'
+import { pageCopy } from '../data/pages'
+const page = pageCopy.jobs
+---
+
+<PageLayout title={page.title} description={page.description}>
+  <PageHero
+    title={page.heading}
+    intro={page.intro}
+    image={photography.garden}
+    alt="Het gebouw, het terras en de tuin van Het Landerhuys"
+  >
+    <div class="jobs-contact">
+      <a class="button" href={`mailto:${business.email}`}>Neem contact op<Arrow /></a><a
+        class="text-link"
+        href={business.phoneHref}>{business.telephone}<Arrow /></a
+      >
+    </div>
+  </PageHero>
+</PageLayout>
