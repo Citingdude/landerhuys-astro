@@ -1,0 +1,9 @@
+---
+import { copy } from '../data/home'
+---
+
+<div class="opening-hours">
+  <h2>{copy.hoursHeading}</h2>
+  {copy.hours.map((line) => <p>{line}</p>)}
+  <p class="kitchen-hours">{copy.kitchen}</p>
+</div>

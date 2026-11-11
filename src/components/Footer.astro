@@ -1,0 +1,29 @@
+---
+import { business, copy } from '../data/home'
+import OpeningHours from './OpeningHours.astro'
+import Arrow from './Arrow.astro'
+---
+
+<footer class="footer" id="praktisch">
+  <div class="container footer-grid">
+    <div class="footer-contact">
+      <a href="/" aria-label="Het Landerhuys — home"
+        ><img src="/images/logo-wit.png" width="240" height="54" alt="Het Landerhuys" /></a
+      >
+      <address><a href={business.directions}>het Landerhuys, Kampweg 65, 3582 Stal - Koersel</a></address>
+      <a class="footer-phone" href={business.phoneHref}>{business.telephone} <Arrow /></a>
+    </div>
+    <OpeningHours />
+    <iframe
+      title="Locatie van Het Landerhuys op Google Maps"
+      src="https://maps.google.com/maps?q=Het%20Landerhuys%2C%20Kampweg%2065%2C%203582%20Koersel&z=14&output=embed"
+      width="480"
+      height="260"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <div class="container payment-note">{copy.payment.map((line) => <p>{line}</p>)}</div>
+  <div class="container footer-bottom">
+    <span>Copyright © {new Date().getFullYear()} | het Landerhuys</span><span>{business.vat}</span>
+  </div>
+</footer>

@@ -1,0 +1,124 @@
+---
+import MainLayout from '../layouts/MainLayout.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import Photography from '../components/Photography.astro'
+import Promotion from '../components/Promotion.astro'
+import Arrow from '../components/Arrow.astro'
+import { copy, links, photography, promotions, additionalLinks } from '../data/home'
+---
+
+<MainLayout>
+  <Header />
+  <main id="inhoud">
+    <section class="hero container" aria-labelledby="hero-heading">
+      <div class="hero-copy">
+        <span class="eyebrow">grand café · Stal-Koersel</span>
+        <h1 id="hero-heading">Het<br /><em>Landerhuys</em></h1>
+        <div class="hero-rule"></div>
+        <p>{copy.intro[1]}</p>
+        <div class="hero-actions">
+          <a class="button" href={links.reservation}>{copy.reservationHeading}<Arrow /></a><a
+            class="text-link"
+            href={links.menu}>{copy.menuHeading}<Arrow /></a
+          >
+        </div>
+        <a class="hero-scroll" href="#restaurant"><span aria-hidden="true">↓</span> {copy.introHeading}</a>
+      </div>
+      <div class="hero-image">
+        <Photography
+          src={photography.garden}
+          alt="Het Landerhuys met de glazen veranda, het terras en de bloeiende tuin op een zonnige dag"
+          eager
+          sizes="(min-width: 1100px) 46vw, 100vw"
+        />
+      </div>
+    </section>
+
+    <section id="restaurant" class="container intro-section section-space" aria-labelledby="restaurant-heading">
+      <div class="intro-copy">
+        <span class="eyebrow">Het Landerhuys</span><h2 id="restaurant-heading">{copy.introHeading}</h2><p class="lead">
+          {copy.intro[0]}
+        </p><p>{copy.intro[1]}</p><a href={links.reservation} class="text-link">{copy.reservationHeading}<Arrow /></a>
+      </div>
+      <div class="intro-image">
+        <Photography src={photography.shellfish} alt="Verse schelpdieren, van dichtbij gefotografeerd" />
+      </div>
+    </section>
+
+    <section class="menu-section" aria-label="Menu en wijn">
+      <div class="container menu-grid">
+        <article class="menu-block">
+          <span class="section-number" aria-hidden="true">01 /</span><h2>
+            <a href={links.menu}>{copy.menuHeading}<Arrow /></a>
+          </h2>{copy.menu.map((p) => <p>{p}</p>)}<div class="menu-photo">
+            <Photography src={photography.butter} alt="Boterkrullen met verse munt en een bloem" />
+          </div>
+        </article>
+        <article class="wine-block">
+          <span class="section-number" aria-hidden="true">02 /</span><h2>
+            <a href={links.wine}>{copy.wineHeading}<Arrow /></a>
+          </h2>{copy.wine.map((p) => <p>{p}</p>)}<div class="wine-illustration" aria-hidden="true">
+            <svg viewBox="0 0 240 250" fill="none"
+              ><path
+                d="M87 25h66l13 66c6 35-17 55-46 55S68 126 74 91l13-66ZM120 146v74m-39 8h78M76 89h88"
+                stroke="currentColor"
+                stroke-width="1.3"></path><path
+                d="M53 171c-15-7-25-20-26-37 17 1 30 12 31 28m130-20c17-9 27-21 29-40-18 1-32 13-33 30M42 211c3-42 12-61 26-81m131 71c-7-38-16-56-29-70"
+                stroke="currentColor"
+                stroke-width="1.3"></path></svg
+            >
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container promotions-section section-space" aria-labelledby="specials-heading">
+      <div class="section-heading">
+        <span class="eyebrow">Het Landerhuys</span><h2 id="specials-heading">SPECIALS</h2><a
+          class="text-link"
+          href={links.specials}>SPECIALS<Arrow /></a
+        >
+      </div><div class="promotions-grid">{promotions.map((promotion) => <Promotion promotion={promotion} />)}</div>
+    </section>
+
+    <section class="reservation-section" aria-labelledby="reservation-heading">
+      <div class="container reservation-grid">
+        <div class="reservation-copy">
+          <span class="eyebrow">Het Landerhuys</span><h2 id="reservation-heading">{copy.reservationHeading}</h2><p>
+            {copy.reservation}
+          </p><a href={links.reservation} class="button button-light">{copy.reservationHeading}<Arrow /></a>
+        </div><div class="reservation-image">
+          <Photography
+            src={photography.herbs}
+            alt="Verse salie, rozemarijn en lavendel uit de bestaande restaurantfotografie"
+            portrait
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="container additional-section section-space" aria-label="Meer bij Het Landerhuys">
+      <div class="additional-grid">
+        {
+          additionalLinks.map((item) => (
+            <article class="additional-card">
+              <a href={item.href}>
+                <>
+                  <h2>
+                    {item.label}
+                    <Arrow />
+                  </h2>
+                  <div class="additional-image">
+                    <Photography src={item.image} alt={item.alt} sizes="(min-width: 768px) 30vw, 90vw" />
+                  </div>
+                </>
+              </a>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+  <Footer />
+</MainLayout>

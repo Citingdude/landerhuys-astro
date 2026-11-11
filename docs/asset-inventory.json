@@ -1,0 +1,146 @@
+[
+  {
+    "file": "public/images/logo-wit.png",
+    "source": "https://landerhuys.be/onewebmedia/logo-wit.png",
+    "bytes": 3630,
+    "width": 200,
+    "height": 45
+  },
+  {
+    "file": "src/assets/Lander_seasons.jpg",
+    "source": "https://landerhuys.be/onewebmedia/Lander_seasons.jpg",
+    "bytes": 141817,
+    "width": 2646,
+    "height": 827
+  },
+  {
+    "file": "src/assets/Lander_kopbanner broccoli.jpg",
+    "source": "https://landerhuys.be/onewebmedia/Lander_kopbanner%20broccoli.jpg",
+    "bytes": 685208,
+    "width": 5669,
+    "height": 1772
+  },
+  {
+    "file": "src/assets/Landerhuys_suggesties oktober 26.jpg",
+    "source": "https://landerhuys.be/onewebmedia/Landerhuys_suggesties%20oktober%2026.jpg",
+    "bytes": 235812,
+    "width": 1748,
+    "height": 2480
+  },
+  {
+    "file": "src/assets/Landerhuys_ontbijt_visdag.jpg",
+    "source": "https://landerhuys.be/onewebmedia/Landerhuys_ontbijt_visdag.jpg",
+    "bytes": 263063,
+    "width": 1748,
+    "height": 2480
+  },
+  {
+    "file": "src/assets/Lander_een wijntje.png",
+    "source": "https://landerhuys.be/onewebmedia/Lander_een%20wijntje.png",
+    "bytes": 11045,
+    "width": 236,
+    "height": 354
+  },
+  {
+    "file": "src/assets/fresh-quahogs-chatham-cape-cod.jpg",
+    "source": "https://landerhuys.be/onewebmedia/fresh-quahogs-chatham-cape-cod.jpg",
+    "bytes": 2953162,
+    "width": 4032,
+    "height": 2268
+  },
+  {
+    "file": "src/assets/24835242_xxl.jpg",
+    "source": "https://landerhuys.be/onewebmedia/24835242_xxl.jpg",
+    "bytes": 2860496,
+    "width": 4879,
+    "height": 3189
+  },
+  {
+    "file": "src/assets/Homemade cadeaubonnen.jpg",
+    "source": "https://landerhuys.be/onewebmedia/Homemade%20cadeaubonnen.jpg",
+    "bytes": 1150789,
+    "width": 4606,
+    "height": 4961
+  },
+  {
+    "file": "src/assets/Lander_kopbanner reserveren.jpg",
+    "source": "https://landerhuys.be/onewebmedia/Lander_kopbanner%20reserveren.jpg",
+    "bytes": 212655,
+    "width": 2646,
+    "height": 827
+  },
+  {
+    "file": "src/assets/Lander_kopbanner reserveren 2.jpg",
+    "source": "https://landerhuys.be/onewebmedia/Lander_kopbanner%20reserveren%202.jpg",
+    "bytes": 300302,
+    "width": 2646,
+    "height": 827
+  },
+  {
+    "file": "src/assets/18281650_xl.jpg",
+    "source": "https://landerhuys.be/onewebmedia/18281650_xl.jpg",
+    "bytes": 633932,
+    "width": 2454,
+    "height": 3539
+  },
+  {
+    "file": "src/assets/Lander_kopbanner specials.jpg",
+    "source": "https://landerhuys.be/onewebmedia/Lander_kopbanner%20specials.jpg",
+    "bytes": 290478,
+    "width": 2646,
+    "height": 827
+  },
+  {
+    "file": "src/assets/Lander_kopbanner specials 2.jpg",
+    "source": "https://landerhuys.be/onewebmedia/Lander_kopbanner%20specials%202.jpg",
+    "bytes": 359451,
+    "width": 2646,
+    "height": 827
+  },
+  {
+    "file": "src/assets/1284.jpg",
+    "source": "https://landerhuys.be/onewebmedia/1284.jpg",
+    "bytes": 1437493,
+    "width": 1500,
+    "height": 1500
+  },
+  {
+    "file": "src/assets/Lander_kopbanner cadeaubon.jpg",
+    "source": "https://landerhuys.be/onewebmedia/Lander_kopbanner%20cadeaubon.jpg",
+    "bytes": 206116,
+    "width": 2646,
+    "height": 827
+  },
+  {
+    "file": "src/assets/Lander_kopbanner cadeaubon 2.jpg",
+    "source": "https://landerhuys.be/onewebmedia/Lander_kopbanner%20cadeaubon%202.jpg",
+    "bytes": 113195,
+    "width": 2646,
+    "height": 827
+  },
+  {
+    "file": "src/assets/Lander_working.jpg",
+    "source": "https://landerhuys.be/onewebmedia/Lander_working.jpg",
+    "bytes": 373545,
+    "width": 3780,
+    "height": 1181
+  },
+  {
+    "file": "src/assets/landerhuys-building.png",
+    "source": "https://www.visitberingen.be/file/imagecache/gg80yO9AYouCCDsZV7A7QhyMwIEHt6Wc5T3PcvAEGQ3d/content/ace33239-1537-4a78-b57f-08294c5ffe04/14718.png",
+    "sourcePage": "https://www.visitberingen.be/landerhuys",
+    "bytes": 624096,
+    "width": 1020,
+    "height": 383,
+    "usage": "Archived exterior reference; replaced in homepage hero",
+    "license": "No explicit reuse license stated on source page"
+  },
+  {
+    "file": "src/assets/landerhuys-garden.jpg",
+    "source": "User-supplied photograph",
+    "bytes": 265415,
+    "width": 1440,
+    "height": 1075,
+    "usage": "Homepage hero \u2014 building, terrace and garden"
+  }
+]

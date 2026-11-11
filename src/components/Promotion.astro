@@ -1,0 +1,23 @@
+---
+import { promotions } from '../data/home'
+import Photography from './Photography.astro'
+import Arrow from './Arrow.astro'
+interface Props {
+  promotion: (typeof promotions)[number]
+}
+const { promotion } = Astro.props
+---
+
+<article class="promotion">
+  <a class="poster-link" href={promotion.original} aria-label={`${promotion.title} — bekijk op volledig formaat`}>
+    <Photography src={promotion.image} alt={promotion.alt} sizes="(min-width: 768px) 42vw, 90vw" />
+  </a>
+  <div class="promotion-caption">
+    <h3>{promotion.title}</h3><a href={promotion.original} aria-label={`${promotion.title} — volledig formaat`}
+      ><Arrow /></a
+    >
+  </div>
+  <details class="poster-transcript">
+    <summary>Lees de volledige inhoud</summary><div>{promotion.transcript.map((line) => <p>{line}</p>)}</div>
+  </details>
+</article>
