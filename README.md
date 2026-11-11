@@ -78,6 +78,8 @@ Theme colours, typography, and responsive layout rules are defined in `src/style
 
 ## Pages
 
+Internal page navigation uses browser-native View Transitions with a short fade. Transitions respect reduced-motion preferences and fall back to regular navigation in browsers without support. Pages retain their normal loading lifecycle, including the Easybooker widget.
+
 | Route        | Content                                             |
 | ------------ | --------------------------------------------------- |
 | `/`          | Restaurant homepage                                 |
