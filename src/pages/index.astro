@@ -20,7 +20,10 @@ import { copy, links, photography, promotions, additionalLinks } from '../data/h
         <div class="hero-actions">
           <a class="button" href={links.reservation}>{copy.reservationHeading}<Arrow /></a><a
             class="text-link"
-            href={links.menu}>{copy.menuHeading}<Arrow /></a
+            href={links.menu}
+            target="_blank"
+            rel="noopener noreferrer"
+            >{copy.menuHeading}<span class="sr-only"> (opent in een nieuw tabblad)</span><Arrow /></a
           >
         </div>
         <a class="hero-scroll" href="#restaurant"><span aria-hidden="true">↓</span> {copy.introHeading}</a>
@@ -50,14 +53,18 @@ import { copy, links, photography, promotions, additionalLinks } from '../data/h
       <div class="container menu-grid">
         <article class="menu-block">
           <span class="section-number" aria-hidden="true">01 /</span><h2>
-            <a href={links.menu}>{copy.menuHeading}<Arrow /></a>
+            <a href={links.menu} target="_blank" rel="noopener noreferrer"
+              >{copy.menuHeading}<span class="sr-only"> (opent in een nieuw tabblad)</span><Arrow /></a
+            >
           </h2>{copy.menu.map((p) => <p>{p}</p>)}<div class="menu-photo">
             <Photography src={photography.butter} alt="Boterkrullen met verse munt en een bloem" />
           </div>
         </article>
         <article class="wine-block">
           <span class="section-number" aria-hidden="true">02 /</span><h2>
-            <a href={links.wine}>{copy.wineHeading}<Arrow /></a>
+            <a href={links.wine} target="_blank" rel="noopener noreferrer"
+              >{copy.wineHeading}<span class="sr-only"> (opent in een nieuw tabblad)</span><Arrow /></a
+            >
           </h2>{copy.wine.map((p) => <p>{p}</p>)}<div class="wine-illustration" aria-hidden="true">
             <svg viewBox="0 0 240 250" fill="none"
               ><path
