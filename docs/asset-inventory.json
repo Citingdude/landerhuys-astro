@@ -1,10 +1,10 @@
 [
   {
-    "file": "public/images/logo-wit.png",
-    "source": "https://landerhuys.be/onewebmedia/logo-wit.png",
-    "bytes": 3630,
-    "width": 200,
-    "height": 45
+    "file": "public/images/landerhuys-logo.webp",
+    "source": "Landerhuys logo.png (aangeleverd door Het Landerhuys)",
+    "bytes": 26914,
+    "width": 800,
+    "height": 156
   },
   {
     "file": "src/assets/Lander_seasons.jpg",
