@@ -9,12 +9,21 @@ const { promotion } = Astro.props
 ---
 
 <article class="promotion">
-  <a class="poster-link" href={promotion.original} aria-label={`${promotion.title} — bekijk op volledig formaat`}>
+  <a
+    class="poster-link"
+    href={promotion.original}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={`${promotion.title} — bekijk op volledig formaat (opent in een nieuw tabblad)`}
+  >
     <Photography src={promotion.image} alt={promotion.alt} sizes="(min-width: 768px) 42vw, 90vw" />
   </a>
   <div class="promotion-caption">
-    <h3>{promotion.title}</h3><a href={promotion.original} aria-label={`${promotion.title} — volledig formaat`}
-      ><Arrow /></a
+    <h3>{promotion.title}</h3><a
+      href={promotion.original}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`${promotion.title} — volledig formaat (opent in een nieuw tabblad)`}><Arrow /></a
     >
   </div>
   <details class="poster-transcript">
