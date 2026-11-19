@@ -28,11 +28,11 @@ export const links = {
   wine: '/onewebmedia/Lander_najaar%2026%20site%20wijn.pdf',
 }
 export const navigation: Destination[] = [
-  { label: 'HOME', href: '/' },
-  { label: 'RESERVEREN', href: links.reservation },
-  { label: 'SPECIALS', href: links.specials },
-  { label: 'CADEAUBON', href: links.gift },
-  { label: 'VACATURES', href: links.jobs },
+  { label: 'Home', href: '/' },
+  { label: 'Reserveren', href: links.reservation },
+  { label: 'Specials', href: links.specials },
+  { label: 'Cadeaubon', href: links.gift },
+  { label: 'Vacatures', href: links.jobs },
 ]
 export const copy = {
   introHeading: 'Ons restaurant',
